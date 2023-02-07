@@ -1,0 +1,56 @@
+{
+    "editor.detectIndentation": false, // vscode默认启用了根据文件类型自动设置tabsize的选项
+    "editor.formatOnSave": true, // 每次保存的时候自动格式化
+    "editor.tabSize": 4, // 一个制表符等于的空格数。
+    "editor.fontSize": 14, // 控制字体大小(像素)
+    "markdown.preview.fontSize": 18, // 控制 Markdown 预览中使用的字号(以像素为单位)
+    "terminal.integrated.fontSize": 12, // 控制终端的字号(以像素为单位)。
+    "git.ignoreLimitWarning": true, // 忽略“存储库中存在大量更改”的警告
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true, // 引号为单引号
+    "javascript.preferences.quoteStyle": "single", // 保存时使用单引号
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false, // 在函数括号前插入空格
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true, // 定义函数参数括号前的空格处理方式
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.lineNumbers": "on", // 控制行号的显示
+    "workbench.editor.enablePreview": true, // 打开文件不覆盖
+    "editor.maxTokenizationLineLength": 2000,
+    "files.trimTrailingWhitespace": true, // 启用后，将在保存文件时删除行尾的空格。
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.tslint": true,
+        "source.fixAll": true
+    },
+    "html.format.indentHandlebars": true,
+    "html.format.indentInnerHtml": true,
+    "html.format.wrapAttributes": "preserve-aligned", // 对属性进行换行
+    //   "eslint.run": "onSave", // 开启eslint校验
+    //   "eslint.alwaysShowStatus": true,
+    // eslint开启错误提示（红色波浪线）
+    //   "eslint.validate": ["typescript", "javascript", "javascriptreact", "vue", "html"],
+    "prettier.trailingComma": "none", // 尽可能控制尾随逗号的输出。 有效选项： '无' - 无尾随逗号 ' es5' - 在ES5中有效的尾随逗号（对象，数组等） 'all' - 尾随逗号 尽可能（函数参数）
+    "prettier.printWidth": 120, // 指定每行代码的最佳长度， 如果超出长度则换行。
+    "prettier.tabWidth": 4, //  "prettier插件 一个制表符等于的空格数。
+    // 图片预览插件的附加文件夹
+    "gutterpreview.sourceFolder": "public",
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    //   "eslint.format.enable": true,
+    "[scss]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[less]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
