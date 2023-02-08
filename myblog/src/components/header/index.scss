@@ -1,0 +1,55 @@
+.box {
+    width: 96%;
+    margin: auto;
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    // color: aliceblue;
+    margin-top: 1%;
+    // background-color: rgba(0, 0, 0, 0.244);
+
+    .logci {
+        width: 20%;
+        font-size: 25px;
+        color: rgb(255, 255, 252);
+    }
+
+    ul {
+        width: 50%;
+        // border: 1px solid red;
+        display: flex;
+        // justify-content: space-between;
+        line-height: 59px;
+        text-decoration: none;
+
+        li {
+            width: 200px;
+            text-align: center;
+            list-style: none;
+            display: flex;
+
+            img {
+                margin-top: 16px;
+                margin-right: 3px;
+                width: 20px;
+                height: 20px;
+
+            }
+
+            a {
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+            }
+
+            .active {
+                color: rgb(173, 67, 234);
+                text-decoration: underline;
+
+            }
+        }
+
+        :hover {
+            color: red;
+        }
+    }
+}
