@@ -1,0 +1,38 @@
+.mapbox {
+    width: 200px;
+    height: 310px;
+    // margin-right: 20px;
+    border-radius: 10px;
+    background-color: rgb(249, 249, 249, 0.8);
+    margin-top: 20px;
+    margin-left: 17px;
+
+    img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 200px;
+        height: 250px;
+        // border: 1px solid red;
+
+    }
+
+    h4 {
+        margin-left: 5px;
+        /*1. 先强制一行内显示文本  （ 默认 normal 自动换行）*/
+        white-space: nowrap;
+
+        /*2. 超出的部分隐藏*/
+        overflow: hidden;
+
+        /*3. 文字用省略号替代超出的部分*/
+        text-overflow: ellipsis;
+    }
+
+    .p-name {
+        margin-left: 5px;
+
+        font-size: 14px;
+    }
+
+
+}

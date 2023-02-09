@@ -1,4 +1,10 @@
 .v-box {
-    height: 800px;
-    border: 1px solid red
+    height: 900px;
+    border: 1px solid red;
+
+    // background-color: red;
+    // overflow: hidden;
+    .v-top {
+        background-color: black;
+    }
 }

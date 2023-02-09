@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import './index.scss';
-export default class index extends Component {
+export default class index extends PureComponent {
     render() {
         return (
             <div className='box'>

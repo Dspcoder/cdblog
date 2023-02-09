@@ -9,7 +9,10 @@ class ShellBox extends Component {
     render() {
         return (
             <div className='shellbox'>
-                <Header />
+                <div className='s-top'>
+                    <Header />
+                </div>
+
                 <div>
                     <Routes>
                         <Route path='/video' element={<Video />} />
