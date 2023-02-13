@@ -1,30 +1,20 @@
-import React, { Component } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React from 'react';
+import { useRoutes } from 'react-router-dom';
 import Header from './components/header';
+import { routeList } from './routes';
 import './shellBox.scss';
-import Video from './pages/video';
-import Music from './pages/music';
-import My from './pages/my';
-class ShellBox extends Component {
-    render() {
-        return (
-            <div className='shellbox'>
-                <div className='s-top'>
-                    <Header />
-                </div>
 
-                <div>
-                    <Routes>
-                        <Route path='/video' element={<Video />} />
-                        <Route path='/music' element={<Music />} />
-                        <Route path='/my' element={<My />} />
-                        <Route path='/lx' element={<Video />} />
-                        {/* <Navigate to='/' element={<Video />} /> */}
-                    </Routes>
-                </div>
+const ShellBox = () => {
+    let element = useRoutes(routeList);
+
+    return (
+        <div className='shellbox'>
+            <div className='s-top'>
+                <Header />
             </div>
-        );
-    }
-}
+            <div>{element}</div>
+        </div>
+    );
+};
 
 export default ShellBox;

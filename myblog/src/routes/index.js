@@ -1,10 +1,10 @@
 import { Navigate } from 'react-router-dom';
+import Video from '../pages/video';
+import Music from '../pages/music';
+import My from '../pages/my';
+import ShowContent from '../components/showContent';
 
-import Video from '../../pages/video';
-
-import Music from '../../pages/music';
-import My from '../../pages/my';
-const myroute = [
+export const routeList = [
     {
         path: '/video',
         element: <Video />
@@ -20,6 +20,9 @@ const myroute = [
     {
         path: '/',
         element: <Navigate to='video' />
+    },
+    {
+        path: '/text',
+        element: <ShowContent />
     }
 ];
-export default myroute;

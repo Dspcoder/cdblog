@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 
-export default class My extends PureComponent {
-    render() {
-        return <div>my</div>;
-    }
-}
+const Index = () => {
+    return <div>my</div>;
+};
+
+export default Index;

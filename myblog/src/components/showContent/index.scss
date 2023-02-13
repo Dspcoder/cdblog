@@ -1,0 +1,23 @@
+.S-box {
+    width: 90%;
+    height: 260px;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid red;
+    display: flex;
+    border-radius: 10px;
+
+    img {
+        height: 100%;
+        width: 174px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .S-text {
+        .vod_blurb {
+            width: 600px;
+        }
+    }
+
+}

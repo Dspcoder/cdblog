@@ -1,20 +1,25 @@
 .c-box {
     width: 90%;
-    height: 800px;
-    margin: auto;
-    margin-top: -30px;
+    // height: 800px;
+    // margin: auto;
+    // margin-top: -30px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-color: rgb(218, 218, 218, 0.8);
-    display: flex;
+    background-color: red;
+    // display: flex;
     // justify-content: space-evenly;
     flex-flow: row wrap;
-    overflow: auto;
-    scrollbar-width: none;
+    // position: absolute;
+    // left: 50%;
+    // transform: translateX(-50%);
+    // overflow: auto;
+    // scrollbar-width: none;
     /* firefox */
 
-    -ms-overflow-style: none;
-    z-index: 99;
+    // -ms-overflow-style: none;
+    z-index: 111 !important;
+    border: 1px solid red;
+    margin-top: -100px;
 
     :hover {
         // transform: scale(1.02);
