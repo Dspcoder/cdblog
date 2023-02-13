@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Dspcoder/cdblog.git/static/css/main.a74075c4.css",
+    "main.js": "/Dspcoder/cdblog.git/static/js/main.c85bd9f2.js",
+    "static/js/787.59ee247b.chunk.js": "/Dspcoder/cdblog.git/static/js/787.59ee247b.chunk.js",
+    "index.html": "/Dspcoder/cdblog.git/index.html",
+    "main.a74075c4.css.map": "/Dspcoder/cdblog.git/static/css/main.a74075c4.css.map",
+    "main.c85bd9f2.js.map": "/Dspcoder/cdblog.git/static/js/main.c85bd9f2.js.map",
+    "787.59ee247b.chunk.js.map": "/Dspcoder/cdblog.git/static/js/787.59ee247b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a74075c4.css",
+    "static/js/main.c85bd9f2.js"
+  ]
+}
