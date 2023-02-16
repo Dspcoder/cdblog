@@ -1,38 +1,24 @@
 import React, { Component } from 'react';
-import { Carousel } from 'antd';
+import './index.scss';
 
+import PubSub from 'pubsub-js';
 export default class index extends Component {
+    state = { arr2: [] };
     render() {
-        const contentStyle = {
-            height: '460px',
-            color: '#fff',
-            lineHeight: '160px',
-            textAlign: 'center',
-            background: '#364d79'
-        };
-
+        // const { urllist } = this.state.arr2;
         return (
-            <div>
-                <Carousel effect='fade' autoplay={true} dotPosition={'top'}>
-                    {this.state.arr.map((item) => (
-                        <div key={item}>
-                            <h3 style={contentStyle}>
-                                <img src={item} alt='' />
-                            </h3>
-                        </div>
-                    ))}
-                </Carousel>
+            <div className='L-box'>
+                <img
+                    id='lunbo-img'
+                    src='https://gd-hbimg.huaban.com/d83c886d452b81e97e580ca3db09afaa45b64e342dee0-TzQbfs_fw1200webp'
+                    alt=''
+                />
             </div>
         );
     }
     componentDidMount() {
-        this.l_data();
+        PubSub.subscribe('lbUrl', (_, data) => {
+            this.setState({ arr2: data });
+        });
     }
-    state = { arr: [] };
-    l_data = () => {
-        if (this.props.lunbo1 !== undefined) {
-            let arr = this.props.lunbo1;
-            this.setState({ arr });
-        }
-    };
 }

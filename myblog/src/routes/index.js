@@ -3,6 +3,9 @@ import Video from '../pages/video';
 import Music from '../pages/music';
 import My from '../pages/my';
 import ShowContent from '../components/showContent';
+import DetailsPage from '../components/detailsPage';
+import Error from '../components/error';
+import NotFound from '../components/NotFound';
 
 export const routeList = [
     {
@@ -22,7 +25,19 @@ export const routeList = [
         element: <Navigate to='video' />
     },
     {
-        path: '/text',
+        path: '/showContent',
         element: <ShowContent />
+    },
+    {
+        path: '/details',
+        element: <DetailsPage />
+    },
+    {
+        path: '/error',
+        element: <Error />
+    },
+    {
+        path: '/NotFound',
+        element: <NotFound />
     }
 ];

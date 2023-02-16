@@ -1,7 +1,7 @@
 import React from 'react';
-import './index.scss';
+
 const Index = () => {
-    return <div className='M-box'>music</div>;
+    return <h1>Not found</h1>;
 };
 
 export default Index;

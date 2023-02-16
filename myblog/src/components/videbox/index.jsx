@@ -1,57 +1,52 @@
-import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import './index.scss';
 
-class Indexx extends Component {
-    state = {
-        url: ''
-    };
-    render() {
-        const { list } = this.props;
-        const { url } = this.state;
-        return (
-            <div>
-                {list !== []
-                    ? list.map((item) => {
-                          return (
-                              //   <h2 key={item.vod_id}>{item.vod_name}</h2>
-                              <NavLink
-                                  state={{ url }}
-                                  onClick={() => this.goThisPage(item.vod_id)}
-                                  className='mapbox'
-                                  key={item.vod_id}
-                              >
-                                  <img src={item.vod_pic} alt='' />
-                                  <h4>{item.vod_name}</h4>
-                                  <p className='p-name'>类型：{item.vod_class}</p>
-                              </NavLink>
-                          );
-                      })
-                    : '12333'}
-            </div>
-        );
-    }
-    goThisPage = (id) => {
-        const { list } = this.props;
+const Index = (props) => {
+    const navigate = useNavigate();
+    const { list } = props;
+    const goThisPage = (id) => {
+        const { list } = props;
         for (let i = 0; i < list.length; i++) {
-            if (list[i].vod_id === id) {
-                const url = list[i].vod_play_url;
-                this.setState(
-                    (state, props) => {
-                        return { url };
-                    },
-                    () => {
-                        console.log(this.state.url);
+            if (list[i].id === id) {
+                const name = list[i].title;
+                axios({
+                    url: 'api1/api.php/provide/vod',
+                    method: 'post',
+                    data: {
+                        ac: 'videolist',
+                        wd: name
                     }
-                );
+                }).then((res) => {
+                    if (res.data.list.length !== 0) {
+                        const newdata = res.data;
+
+                        navigate('/showContent', { state: { newdata } });
+                    } else {
+                        navigate('/NotFound');
+                    }
+                });
             }
         }
-
-        setTimeout(() => {
-            console.log(this.state.url);
-        }, 1000);
-        this.props.history.push('http://localhost:3000');
+        navigate('/');
     };
-}
 
-export default Indexx;
+    return (
+        <>
+            {list !== []
+                ? list.map((item) => {
+                      return (
+                          <div onClick={() => goThisPage(item.id)} className='mapbox' key={item.id}>
+                              <img src={item.cdncover} alt='' />
+                              <h4>{item.title}</h4>
+                              <p className='p-name'>类型：{item.moviecategory}</p>
+                          </div>
+                      );
+                  })
+                : '12333'}
+        </>
+    );
+};
+
+export default Index;

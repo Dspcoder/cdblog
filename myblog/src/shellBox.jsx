@@ -2,6 +2,7 @@ import React from 'react';
 import { useRoutes } from 'react-router-dom';
 import Header from './components/header';
 import { routeList } from './routes';
+import Buttom from './components/buttom';
 import './shellBox.scss';
 
 const ShellBox = () => {
@@ -9,10 +10,11 @@ const ShellBox = () => {
 
     return (
         <div className='shellbox'>
-            <div className='s-top'>
-                <Header />
-            </div>
+            <Header />
             <div>{element}</div>
+            <div>
+                <Buttom />
+            </div>
         </div>
     );
 };

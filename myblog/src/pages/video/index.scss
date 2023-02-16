@@ -1,9 +1,8 @@
 .v-box {
-    height: 900px;
-    // border: 1px solid red;
+    // background-color: black;
+    margin-top: 5rem;
 
     // background-color: red;
-    // overflow: hidden;
     .v-top {
         background-color: black;
     }
@@ -12,5 +11,10 @@
         margin-top: 30px;
         height: 5px;
         background-color: rgb(93, 19, 231);
+    }
+
+    .v-lunbo1 {
+        height: 460px;
+        border: 1px solid rgb(17, 237, 72);
     }
 }

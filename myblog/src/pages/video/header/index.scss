@@ -1,4 +1,25 @@
-.h-box {
+$bjs-color: #6583f9;
+
+.h-box1 {
+
     border: 1px solid red;
     height: 40px;
+    // background-color: black;
+
+    input {
+        height: 30px;
+        width: 230px;
+        margin-left: 68.125rem;
+        border: 1px dotted red;
+        border-radius: 5px;
+    }
+
+    button {
+        border: 0px;
+        height: 30px;
+        width: 79px;
+        background-color: $bjs-color;
+        border-radius: 5px;
+        color: #ffffff;
+    }
 }
